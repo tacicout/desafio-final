@@ -6,7 +6,7 @@ A empresa `E-Commerce Ltda` deseja melhorar a experiência de seus clientes ao e
 Criar uma página web simples usando React que consome uma API de ofertas diárias (Mercado Livre), utiliza componentização e hooks (useState, useEffect), e exibe os dados das ofertas em uma interface amigável. A aplicação deve fazer uma requisição GET ao carregar a página tratando possíveis erros com try/catch.
 
 ## Sobre a API 
-A API sugerida é [API do mercado livre](https://www.devmedia.com.br/consumindo-uma-api-com-react-js-e-axios/42900) contudo desde que sejam atendidos todos os os objetivos, outra API pode ser usada.
+A API sugerida é [API do mercado livre](https://developers.mercadolivre.com.br/pt_br/ofertas-do-dia) contudo desde que sejam atendidos todos os os objetivos, outra API pode ser usada.
 
 - Guia de Uso da API de Ofertas do Dia do Mercado Livre
   

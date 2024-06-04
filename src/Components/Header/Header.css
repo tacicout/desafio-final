@@ -1,0 +1,60 @@
+header {
+    background-color: #d31410;
+    padding: 10px; /* Reduzir o padding do header */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Para separar os elementos */
+    align-items: center;
+    height: 100%;
+    position: relative; /* Necessário para centralização absoluta */
+}
+
+.header-left {
+    flex: 1; /* Ocupará o espaço necessário à esquerda */
+}
+
+.header-center {
+    position: absolute; /* Centraliza a barra de busca */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-right {
+    flex: 1; /* Ocupará o espaço necessário à direita */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-logo {
+    width: 80px;
+    margin-left: 20px; /* Reduzir o tamanho da logo */
+    margin-right: 10px; /* Diminuir a margem direita da logo */
+}
+
+.header-search {
+    position: relative;
+}
+
+.header-search input {
+    padding: 10px 30px 10px 10px; /* Reduzir o padding do input */
+    border-radius: 5px;
+    border: none;
+    width: 400px; /* Reduzir a largura do input */
+    font-size: 14px; /* Reduzir o tamanho da fonte do input */
+}
+
+.header-search-icon {
+    position: absolute;
+    right: 5px; /* Ajustar a posição do ícone */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-cart-icon {
+    font-size: 24px;
+    margin-right: 20px; /* Ajustar a margem direita do ícone do carrinho */
+    color: white; /* Ajustar a cor do ícone do carrinho */
+}

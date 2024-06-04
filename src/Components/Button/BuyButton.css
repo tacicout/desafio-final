@@ -1,0 +1,20 @@
+.buy-button {
+    background-color: #f7b500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: auto;
+    cursor: pointer;
+    display: flex; /* Use flex para alinhar o ícone e o texto */
+    align-items: center; /* Alinhe verticalmente */
+    justify-content: center; /* Alinhe horizontalmente */
+  }
+  
+  .buy-button .icon {
+    margin-right: 5px; /* Adicione margem à direita do ícone */
+  }
+  
+  .buy-button:hover {
+    background-color: #e6a100;
+  }

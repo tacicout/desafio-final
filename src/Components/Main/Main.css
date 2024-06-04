@@ -1,0 +1,15 @@
+/* src/components/main/Main.css */
+
+.main-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}

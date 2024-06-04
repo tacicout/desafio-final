@@ -1,0 +1,15 @@
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif; /* Adicione esta linha */
+    transition: border-color 0.3s; /* Adicione transição para suavizar a mudança de cor da borda */
+  }
+  
+  .nav-button:hover {
+    border: 1px solid white; /* Adicione uma borda branca apenas quando o mouse estiver sobre os botões */
+    text-decoration: none; /* Remova o sublinhado */
+  }
+  

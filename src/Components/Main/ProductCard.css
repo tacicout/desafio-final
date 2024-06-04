@@ -1,0 +1,70 @@
+.product-card {
+  width: calc(20% - 20px); /* Reduz a largura dos cards para 20% da largura do contêiner, com uma margem de 20px */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centraliza o conteúdo do card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 350px; /* Defina a altura máxima do card conforme necessário */
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do card quando o mouse passa sobre ele */
+}
+
+.product-card img {
+  width: 80%; /* Ajusta a largura da imagem para ocupar toda a largura do card */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-height: 40%; /* Define uma altura máxima para a imagem */
+  margin: auto; /* Centraliza a imagem horizontalmente */
+  display: block; 
+  height: auto;
+}
+
+.product-info {
+  padding: 10px;
+  flex-grow: 1; /* Permite que .product-info cresça para preencher o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha o conteúdo no topo */
+
+}
+
+.product-info h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px; /* Tamanho do nome do produto */
+  margin-bottom: 1px;
+}
+
+.product-info p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px; /* Tamanho da descrição e do preço */
+  margin-bottom: 1px;
+}
+
+.price-container {
+  margin-bottom: 4px; /* Ajuste conforme necessário */
+}
+
+.product-info p.price {
+  font-weight: bold;
+  color: #d31410;
+  font-size: 16px;
+  text-align: center;
+  
+}
+
+.buy-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  padding: 5px 0;
+}

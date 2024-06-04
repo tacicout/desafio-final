@@ -1,0 +1,63 @@
+/* src/components/main/ProductModal.css */
+.product-modal {
+    position: fixed;
+    top: 50%; /* Centralize verticalmente */
+    right: 220px; /* Posicione o modal à direita */
+    transform: translate(50%, -50%); /* Centralize verticalmente */
+    width: 400px; /* Defina a largura fixa do modal */
+    height: calc(100vh - 100px); /* Defina a altura do modal em relação à altura da viewport - ajuste conforme necessário */
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; /* Adicione overflow-y para permitir rolagem vertical se necessário */
+    font-family: 'Raleway', sans-serif; 
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .close-button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .buy-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  img {
+    max-width: 100%; /* Limite a largura da imagem para que ela não ultrapasse o modal */
+    height: auto; /* Mantenha a proporção da imagem */
+    margin-bottom: 10px; /* Adicione margem inferior para separar a imagem dos outros elementos */
+  }
+  
+  .title {
+    margin-bottom: 5px; /* Reduza a margem inferior entre o título e a descrição */
+    font-size: 1.2rem; /* Defina um tamanho menor para o título */
+  }
+  
+  .description {
+    margin-top: 5px; /* Aumente a margem superior entre o título e a descrição */
+    font-size: 1rem; /* Defina um tamanho menor para a descrição */
+  }
+  

@@ -1,0 +1,16 @@
+@import './Components/Header/Header.css';
+@import './Components/Footer/Footer.css';
+@import './Components/Main/Main.css';
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que a altura do contêiner seja no mínimo a altura da tela inteira */
+  }
+  
+  .main-content {
+    flex-grow: 1; /* Faz o Main ocupar o máximo de espaço disponível */
+  }
+  

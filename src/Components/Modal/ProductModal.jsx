@@ -1,9 +1,15 @@
-// src/components/main/ProductModal.jsx
-import React from 'react';
-import './ProductModal.css'; // Crie este arquivo para estilizar o modal
+import React, { useState } from 'react';
+import './ProductModal.css';
+import AddButton from '../Button/AddButton';
 
+const ProductModal = ({ product, onClose, onAddToCart }) => {
+  const [added, setAdded] = useState(false);
 
-const ProductModal = ({ product, onClose }) => {
+  const handleAddToCart = () => {
+    onAddToCart(product);
+    setAdded(true);
+  };
+
   return (
     <div className="product-modal">
       <div className="modal-content">
@@ -12,7 +18,7 @@ const ProductModal = ({ product, onClose }) => {
         <h2>{product.title}</h2>
         <p>{product.description}</p>
         <p className="price">${product.price}</p>
-        <button className="buy-button">Comprar</button>
+        <AddButton onAdd={handleAddToCart} added={added} />
       </div>
     </div>
   );

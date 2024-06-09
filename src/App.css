@@ -3,14 +3,48 @@
 @import './Components/Main/Main.css';
 
 
-
 .container {
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que a altura do contêiner seja no mínimo a altura da tela inteira */
-  }
-  
-  .main-content {
+    flex-wrap: wrap;
+
+}
+
+.main-content {
     flex-grow: 1; /* Faz o Main ocupar o máximo de espaço disponível */
-  }
-  
+}
+
+/* Estilos para telas pequenas (mobile) */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Adiciona um pouco de padding para telas menores */
+    }
+
+    .header, .footer {
+        text-align: center; /* Centraliza o texto no header e footer */
+    }
+}
+
+/* Estilos para telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        padding: 20px; /* Adiciona um pouco mais de padding para tablets */
+    }
+
+    .header, .footer {
+        text-align: left; /* Alinha o texto à esquerda no header e footer */
+    }
+}
+
+/* Estilos para telas grandes (desktops) */
+@media (min-width: 1025px) {
+    .container {
+        padding: 30px; /* Adiciona padding para desktops */
+    }
+
+    .header, .footer {
+        text-align: left; /* Alinha o texto à esquerda no header e footer */
+    }
+}

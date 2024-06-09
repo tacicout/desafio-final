@@ -4,3 +4,17 @@
     color: white;
     text-align: center;
 }
+
+/* Estilos para telas pequenas (mobile) */
+@media (max-width: 600px) {
+    .footer {
+        padding: 20px;
+    }
+}
+
+/* Estilos para telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .footer {
+        padding: 15px;
+    }
+}

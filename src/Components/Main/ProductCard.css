@@ -1,64 +1,64 @@
 .product-card {
-  width: calc(20% - 20px); /* Reduz a largura dos cards para 20% da largura do contêiner, com uma margem de 20px */
+  width: calc(15% - 30px);
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centraliza o conteúdo do card */
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 350px; /* Defina a altura máxima do card conforme necessário */
+  max-height: 350px;
   overflow: hidden;
 }
 
 .product-card:hover {
-  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do card quando o mouse passa sobre ele */
+  transform: scale(1.05);
 }
 
 .product-card img {
-  width: 80%; /* Ajusta a largura da imagem para ocupar toda a largura do card */
+  width: 80%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  max-height: 40%; /* Define uma altura máxima para a imagem */
-  margin: auto; /* Centraliza a imagem horizontalmente */
-  display: block; 
+  max-height: 40%;
+  margin: auto;
+  display: block;
   height: auto;
+  object-fit: contain;
+  margin-top: 20px;
 }
 
 .product-info {
-  padding: 10px;
-  flex-grow: 1; /* Permite que .product-info cresça para preencher o espaço disponível */
+  padding: 8px;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Alinha o conteúdo no topo */
-
+  justify-content: flex-start;
 }
 
 .product-info h2 {
   font-family: 'Raleway', sans-serif;
-  font-size: 15px; /* Tamanho do nome do produto */
+  font-size: 14px;
   margin-bottom: 1px;
 }
 
 .product-info p {
   font-family: 'Raleway', sans-serif;
-  font-size: 12px; /* Tamanho da descrição e do preço */
+  font-size: 12px;
   margin-bottom: 1px;
 }
 
 .price-container {
-  margin-bottom: 4px; /* Ajuste conforme necessário */
+  margin-bottom: 4px;
 }
 
 .product-info p.price {
   font-weight: bold;
   color: #d31410;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
-  
 }
 
 .buy-button-container {
@@ -67,4 +67,49 @@
   align-items: center;
   margin-top: 5px;
   padding: 5px 0;
+}
+
+/* Estilos para telas pequenas (mobile) */
+@media (max-width: 600px) {
+  .product-card {
+      width: calc(80% - 10px);
+      margin: 10px 0;
+  }
+
+  .product-card img {
+      width: 50%;
+      max-height: 150px;
+  }
+}
+
+/* Estilos para telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .product-card {
+      width: calc(45% - 20px);
+  }
+
+  .product-card img {
+      width: 80%;
+  }
+}
+
+@media (min-width: 720px) {
+  .product-card {
+      width: calc(20% - 30px);
+  }
+
+  .product-card img {
+      width: 50%;
+  }
+}
+
+/* Estilos para telas grandes (desktops) */
+@media (min-width: 1025px) {
+  .product-card {
+      width: calc(20% - 30px);
+  }
+
+  .product-card img {
+      width: 80%;
+  }
 }

@@ -1,0 +1,21 @@
+.add-button {
+  background-color: #f7b500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: auto;
+  cursor: pointer;
+  display: flex; /* Use flex para alinhar o ícone e o texto */
+  align-items: center; /* Alinhe verticalmente */
+  justify-content: center; /* Alinhe horizontalmente */
+}
+
+.add-button.added {
+  background-color: green;
+  color: white;
+}
+
+.add-button:disabled {
+  cursor: not-allowed;
+}

@@ -1,14 +1,13 @@
-// src/components/main/Main.jsx
 import React, { useState, useEffect } from 'react';
 import fetchData from './FetchData';
 import ProductCard from './ProductCard';
-import ProductModal from '../Modal/ProductModal'; 
+import ProductModal from '../Modal/ProductModal';
 
-const Main = ({ searchTerm, selectedCategory }) => {
+
+const Main = ({ searchTerm, selectedCategory, onAddToCart, onOpenModal, onCloseModal, selectedProduct }) => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     const loadItems = async () => {
@@ -26,22 +25,21 @@ const Main = ({ searchTerm, selectedCategory }) => {
   }, []);
 
   const handleViewClick = (product) => {
-    setSelectedProduct(product);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProduct(null);
+    onOpenModal(product);
   };
 
   // Filtro de pesquisa
-  const filteredItems = searchTerm ? items.filter(item =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  ) : items; // Se searchTerm estiver vazio, renderiza todos os itens
+  const filteredItems = searchTerm
+    ? items.filter(item =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : items; // Se searchTerm estiver vazio, renderiza todos os itens
 
   // Filtro de categoria
-  const categoryFilteredItems = selectedCategory ? filteredItems.filter(item =>
-    item.category.toLowerCase() === selectedCategory.toLowerCase()
-  ) : filteredItems; // Se selectedCategory estiver vazio, não aplica filtro de categoria
+  const categoryFilteredItems = selectedCategory
+    ? filteredItems.filter(item =>
+        item.category.toLowerCase() === selectedCategory.toLowerCase())
+    : filteredItems; // Se selectedCategory estiver vazio, não aplica filtro de categoria
 
   return (
     <main className="main-container">
@@ -52,7 +50,13 @@ const Main = ({ searchTerm, selectedCategory }) => {
           <ProductCard key={item.id} product={item} onViewClick={handleViewClick} />
         ))}
       </div>
-      {selectedProduct && <ProductModal product={selectedProduct} onClose={handleCloseModal} />}
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={onCloseModal}
+          onAddToCart={onAddToCart} // Passando a função de adicionar ao carrinho
+        />
+      )}
     </main>
   );
 };

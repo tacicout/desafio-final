@@ -1,60 +1,201 @@
+/* src/Components/Header/Header.css */
+
+
+
 header {
     background-color: #d31410;
-    padding: 10px; /* Reduzir o padding do header */
+    padding: 0 2%;
+    height: 120px;
+
+
 }
 
 .header-container {
+    width: 100%;
+    padding-left: 40px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Para separar os elementos */
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    height: 100%;
-    position: relative; /* Necessário para centralização absoluta */
+
 }
 
 .header-left {
-    flex: 1; /* Ocupará o espaço necessário à esquerda */
+    flex: 1;
+    padding-left: 40px;
 }
 
-.header-center {
-    position: absolute; /* Centraliza a barra de busca */
-    left: 50%;
-    transform: translateX(-50%);
-}
 
-.header-right {
-    flex: 1; /* Ocupará o espaço necessário à direita */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.header-logo {
+.header-left .header-logo {
     width: 80px;
-    margin-left: 20px; /* Reduzir o tamanho da logo */
-    margin-right: 10px; /* Diminuir a margem direita da logo */
+    margin: 20px 15px 0 20px;
 }
 
 .header-search {
-    position: relative;
+    flex: 2;
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
 }
 
 .header-search input {
-    padding: 10px 30px 10px 10px; /* Reduzir o padding do input */
+    position: relative;
     border-radius: 5px;
     border: none;
-    width: 400px; /* Reduzir a largura do input */
-    font-size: 14px; /* Reduzir o tamanho da fonte do input */
+    width: 400px;
+    margin: 0 auto;
+    font-size: 14px;
+    height: 24px;
+    padding: 8px 12px;
 }
 
 .header-search-icon {
-    position: absolute;
-    right: 5px; /* Ajustar a posição do ícone */
-    top: 50%;
+    position: relative;
+    top: 20px;
+    right: 60px;
     transform: translateY(-50%);
+}
+
+.header-cart {
+    flex: 1;
+    display: flex;
+    align-items: end;
+    position: relative;
+    padding-left: 200px;
+    margin-top: 20px;
+}
+
+.header-container-icone {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #7e0b09;
+    position: relative;
+    right: 20px;
+    top: -20px;
+}
+
+.cart-count {
+    position: relative;
+    right: -6px;
+    color: #f7f1f1
 }
 
 .header-cart-icon {
     font-size: 24px;
-    margin-right: 20px; /* Ajustar a margem direita do ícone do carrinho */
-    color: white; /* Ajustar a cor do ícone do carrinho */
+    color: #f7f1f1;
+}
+
+
+
+
+/* Estilos para telas pequenas (mobile) */
+@media (max-width: 1100px) {
+
+
+    header {
+        background-color: #d31410;
+        padding: 20px 2%;
+        height: auto;
+
+    }
+
+    .header-container {
+        padding: 0 2%;
+        display: flex;
+       justify-content: space-between;
+       align-items: center;
+        gap: 20px;
+
+    }
+
+
+    .header-left {
+        flex: 1;
+        padding: 0 2%;
+    }
+
+
+    .header-search {
+        flex: 2;
+    }
+   
+}
+
+@media (max-width: 900px) {
+
+
+    header {
+        background-color: #d31410;
+        padding: 0 2%;
+        height: auto;
+
+    }
+
+    .header-container {
+        padding: 0 2%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+
+    .header-left {
+        flex: 1;
+        padding: 0 2%;
+    }
+
+
+    .header-search {
+        flex: 1;
+        display: flex;
+        gap: 0px;
+        margin-top: 12px;
+    }
+
+    .header-search input {
+
+        max-width: 80%;
+        margin: 0 auto;
+
+    }
+
+    .header-search-icon {
+        position: relative;
+        top: 20px;
+        right: 60px;
+        transform: translateY(-50%);
+    }
+
+    .header-cart {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0 20px 40px 20px;
+        margin-top: 20px;
+    }
+
+    .header-container-icone {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #7e0b09;
+        position: relative;
+        right: 20px;
+        top: -20px;
+    }
+
+    .cart-count {
+        position: relative;
+        right: -6px;
+        color: #f7f1f1
+    }
+
+    .header-cart-icon {
+        font-size: 24px;
+        color: #f7f1f1;
+    }
 }
